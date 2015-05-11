@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Http-status-codes by chilieu</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/chilieu/HTTP-Status-Codes">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Http-status-codes</h1>
+            <h2>This page is created from HTTP status code information found at ietf.org and Wikipedia.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/chilieu/HTTP-Status-Codes/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/chilieu/HTTP-Status-Codes/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="200-ok" class="anchor" href="#200-ok" aria-hidden="true"><span class="octicon octicon-link"></span></a>200 OK</h1>
+
+<p>The request has succeeded. The information returned with the response is dependent on the method used in the request, for example:</p>
+
+<p>GET an entity corresponding to the requested resource is sent in the response;
+HEAD the entity-header fields corresponding to the requested resource are sent in the response without any message-body;
+POST an entity describing or containing the result of the action;
+TRACE an entity containing the request message as received by the end server.
+<strong>Wikipedia</strong>
+Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.</p>
+
+<p><code>General status code. Most common code used to indicate success.</code></p>
+
+<hr>
+
+<h1>
+<a id="201-created" class="anchor" href="#201-created" aria-hidden="true"><span class="octicon octicon-link"></span></a>201 Created</h1>
+
+<p>The request has been fulfilled and resulted in a new resource being created. The newly created resource can be referenced by the URI(s) returned in the entity of the response, with the most specific URI for the resource given by a Location header field. The response SHOULD include an entity containing a list of resource characteristics and location(s) from which the user or user agent can choose the one most appropriate. The entity format is specified by the media type given in the Content-Type header field. The origin server MUST create the resource before returning the 201 status code. If the action cannot be carried out immediately, the server SHOULD respond with 202 (Accepted) response instead.</p>
+
+<p>A 201 response MAY contain an ETag response header field indicating the current value of the entity tag for the requested variant just created, see section 14.19.</p>
+
+<p><strong>Wikipedia</strong>
+The request has been fulfilled and resulted in a new resource being created.
+<code>Successful creation occurred (via either POST or PUT). Set the Location header to contain a link to the newly-created resource (on POST). Response body content may or may not be present.</code></p>
+
+<hr>
+
+<h1>
+<a id="301-moved-permanently" class="anchor" href="#301-moved-permanently" aria-hidden="true"><span class="octicon octicon-link"></span></a>301 Moved Permanently</h1>
+
+<p>The requested resource has been assigned a new permanent URI and any future references to this resource SHOULD use one of the returned URIs. Clients with link editing capabilities ought to automatically re-link references to the Request-URI to one or more of the new references returned by the server, where possible. This response is cacheable unless indicated otherwise.</p>
+
+<p>The new permanent URI SHOULD be given by the Location field in the response. Unless the request method was HEAD, the entity of the response SHOULD contain a short hypertext note with a hyperlink to the new URI(s).</p>
+
+<p>If the 301 status code is received in response to a request other than GET or HEAD, the user agent MUST NOT automatically redirect the request unless it can be confirmed by the user, since this might change the conditions under which the request was issued.</p>
+
+<p>Note: When automatically redirecting a POST request after receiving a 301 status code, some existing HTTP/1.0 user agents will erroneously change it into a GET request.
+<strong>Wikipedia</strong>
+<code>This and all future requests should be directed to the given URI.</code></p>
+
+<hr>
+
+<h1>
+<a id="404-not-found" class="anchor" href="#404-not-found" aria-hidden="true"><span class="octicon octicon-link"></span></a>404 Not Found</h1>
+
+<p>The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable.</p>
+
+<p><strong>Wikipedia</strong>
+The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.</p>
+
+<p><code>Used when the requested resource is not found, whether it doesn't exist or if there was a 401 or 403 that, for security reasons, the service wants to mask.</code></p>
+
+<hr>
+
+<h1>
+<a id="500-internal-server-error" class="anchor" href="#500-internal-server-error" aria-hidden="true"><span class="octicon octicon-link"></span></a>500 Internal Server Error</h1>
+
+<p>The server encountered an unexpected condition which prevented it from fulfilling the request.</p>
+
+<p><strong>Wikipedia</strong>
+A generic error message, given when no more specific message is suitable.
+<code>The general catch-all error when the server-side throws an exception.</code></p>
+
+<p>get more from <a href="http://www.chilieu.me/HTTP-status-codes/">HTTP Status Codes</a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/chilieu">chilieu</a> can be found on <a href="https://github.com/chilieu/HTTP-Status-Codes">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59474380-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
